@@ -25,5 +25,5 @@ cd ..
 catkin build code_coverage && source devel/setup.bash
 catkin config --cmake-args -DENABLE_COVERAGE_TESTING=ON -DCMAKE_BUILD_TYPE=Debug
 catkin build rvip -v --no-deps --catkin-make-args rvip_coverage_report
-export CODECOV_TOKEN="f477e2ae-3b0e-48ff-9d20-e1cf9846731d"
+export CODECOV_TOKEN="a8394d4e-99b4-4408-92e3-ed1fc51e9324"
 bash <(curl -s https://codecov.io/bash)

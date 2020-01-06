@@ -1,8 +1,5 @@
 # Robotic Vision Integration Package (RVIP) Documentation
 
-[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-[![codecov](https://codecov.io/gl/cardboardcode/rvip_ros/branch/master/graph/badge.svg?token=9XFJvJLbpK)](https://codecov.io/gl/cardboardcode/rvip)
-
 ## What Is This?
 
 **RVIP** is a ROS package that offers **easy integration of 2D-3D hybrid pose alignment processes** used in robotic vision applications.
@@ -10,23 +7,6 @@
 By taking in both **2D RGB images** with **3D PointCloud** information, RVIP combines the high effieciency and accuracy of 2D computer vision architectures with the robust data points of depth information.
 
 This is done so in an effort to ensure higher reliability and reduced volatility of object localization results, needed for safer robot-human collaboration spaces.
-
-For a detailed documentation on RVIP, please execute the following commands:
-1. Clone this repository into the `src` folder of your catkin workspace.
-
-> ` $ git clone https://github.com/cardboardcode/rvip.git`
-
-2. Install **rosdoc_lite**.
-
-> `$ sudo apt install ros-melodic-rosdoc-lite`
-
-3. Go to the `rvip` subdirectory and run rosdoc_lite command
-
-> `$ cd rvip && rosdoc_lite .`
-
-4. View the documentation on your browser.
-
-> `$ firefox doc/html/doc/index.html `
 
 ## How Does It Work?
 
@@ -39,7 +19,7 @@ The flow of data using RVIP is illustrated in the following diagram.
 **Outputs**:
 1. Object Centroid Position, Orientation and Dimensions (visualisation_msgs::MarkerArray,tf::Transform)
 
-![](/rvip/img/rvip_architecture.jpg)
+![](rvip_architecture.jpg)
 <center>RVIP Architecture Diagram</center>
 
 ### Stages
@@ -84,13 +64,11 @@ RVIP estimates the height by subtracting the upper and lower z-limits.
 
 
 ## Setup
-This section provides instructions on how to install and use **RVIP**. These instructions are only to set up RVIP to run in isolation.
+This section provides instructions on how to install and use **RVIP**.
 
-To run RVIP as a complete robotic vision suite, please follow the instructions in [**demo.md**](demo.md).
-
-### There are **2** parts to the setup.
-1. **OpenGR** Setup
-2. **RVIP** Setup
+### There are **3** parts to the setup.
+1. OpenGR Setup
+2. RVIP Setup
 
 # !**`WARNING`**!
 > [WIP] The **OpenGR** library used in 0.0.1 alpha version is an outdated version. Please follow the instructions below to download the specific version of OpenGR highlighted.
@@ -105,7 +83,7 @@ To run RVIP as a complete robotic vision suite, please follow the instructions i
 3. **Git Revert** to the specified version of OpenGR.
 > `$ git reset --hard 0967cd880950b35786b8fd098837c9eb1fe2aca4`
 
-![](/rvip/img/opengr_commit.png)
+![](opengr_commit.png)
 **Click** [here](https://github.com/STORM-IRIT/OpenGR/commit/0967cd880950b35786b8fd098837c9eb1fe2aca4) to go to the webpage with this commit.
 
 4. **Create** and **Go** to a build directory
@@ -122,7 +100,7 @@ To run RVIP as a complete robotic vision suite, please follow the instructions i
 1. **Download** this repository via SSH into the `src` directory of your **catkin** workspace.
 > `$ cd path/to/your/<workspace_name>/src`
 >
-> `$ git clone https://github.com/cardboardcode/rvip.git`
+> `$ git clone git@gitlab.com:cardboardcode/rvip_ros.git`
 
 2. **Build** **RVIP** ROS package.
 > `$ catkin build rvip -DCMAKE_BUILD_TYPE=Release`
@@ -130,20 +108,7 @@ To run RVIP as a complete robotic vision suite, please follow the instructions i
 3. **Source** your workspace.
 > `$ source path/to/your/<workspace_name>/devel/setup.bash`
 
-# **Run**
-After following the instructions under **Setup**, run the commands below:
 
-1. Go to the root of your catkin workspace.
-> `$ cd path/to/your/\<workspace_name>/``
-
-2. **Source** your workspace..
-> `$ source path/to/your/<workspace_name>/devel/setup.bash`
-
-3. **Build** your workspace.
-> `$ catkin build -DCMAKE_BUILD_TYPE=Release`
-
-4. **Run** RVIP.
-> `$ roslaunch rvip run.launch debug:=false`
 
 ## Nodes
 **RVIP** is represented by the `rvip` directory in this repository. It is a single ROS node.
@@ -171,12 +136,6 @@ After following the instructions under **Setup**, run the commands below:
 * `/rvip/obj_marker` ([visualization_msgs::MarkerArray])
 
     Allows visualization of the generated cuboid containing information highlighted in the diagram above.
-
-## FAQ
-
-1. What is the use of `rvip_roi_parser`?
-
-Please refer to [README.md under rvip_roi_parser](/rvip_roi_parser/README.md).
 
 ## Acknowledgement
 Credits to **ROS-Industrial Consortium Asia Pacific** for providing the opportunity and industrial resources used in developing and testing this project.

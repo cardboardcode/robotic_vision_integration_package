@@ -122,7 +122,7 @@ This removes reliance of CUDA temporarily to run **darknet_ros** YOLO object det
 1. **Download** this repository via SSH into the `src` directory of your **catkin** workspace.
 > `$ cd path/to/your/<workspace_name>/src`
 >
-> `$ git clone git@gitlab.com:cardboardcode/rvip_ros.git`
+> `$ git clone https://github.com/cardboardcode/rvip.git`
 
 2. **Build** **RVIP** ROS package.
 > `$ catkin build rvip -DCMAKE_BUILD_TYPE=Release`
@@ -152,4 +152,4 @@ Having trouble compiling and using **RVIP**? **Check** out the following frequen
 ### 1. **darknet_ros** is taking **FOREVER** to build.
 Please **refer** to [this GitHub issue](https://github.com/leggedrobotics/darknet_ros/issues/129#issuecomment-533609094) for more details on how to solve it.
 
-For further issues, [click here](https://gitlab.com/cardboardcode/rvip_ros/issues) to report as a GitLab issue here in this repository.
+For further issues, [click here](https://github.com/cardboardcode/rvip/issues) to report as an issue here in this repository.
