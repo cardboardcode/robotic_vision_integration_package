@@ -1,0 +1,10 @@
+image: osrf/ros:melodic-desktop-full
+
+before_script:
+  - ls && echo "before script"
+stages:
+  - build
+
+build:
+  stage: build
+  script: . ci_script.sh

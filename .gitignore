@@ -1,0 +1,24 @@
+## Only track the following files.
+/*
+## Root Directory
+!readme.md
+!demo.md
+!.gitignore
+!.gitlab-ci.yml
+!ci_script.sh
+
+## Object Detection Directory
+!/rvip
+/rvip/*
+!/rvip/include
+!/rvip/CMakeLists.txt
+!/rvip/package.xml
+!/rvip/rosdoc.yaml
+!/rvip/README.md
+!/rvip/launch
+!/rvip/img
+!/rvip/rviz
+!/rvip/src
+!/rvip/test
+!/rvip_roi_parser
+!/img

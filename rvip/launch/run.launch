@@ -1,0 +1,23 @@
+<launch>
+
+  <arg name="debug" default="true"/>
+  <arg name="rviz" default="true"/>
+
+  <group if="$(arg rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rvip)/rviz/debug_config.rviz"/>
+  </group>
+
+  <node pkg="rvip_roi_parser" name="rvip_roi_parser" type="rvip_roi_parser" output="screen">
+  </node>
+
+  <group unless="$(arg debug)">
+    <include file="$(find kinect2_bridge)/launch/kinect2_bridge.launch" />
+    <include file="$(find darknet_ros)/launch/darknet_ros.launch"/>
+  </group>
+
+  <node pkg="rvip" name="rvip_package" type="rvip" output="screen" respawn="true">
+    <remap from="camera_3d" to="/kinect2/hd/points"/>
+    <param name="frame_id" value="/kinect2_rgb_optical_frame"/>
+  </node>
+
+</launch>

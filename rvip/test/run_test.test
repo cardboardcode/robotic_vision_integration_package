@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="rvip" name="rvip_node" type="rvip"/>
+  <test test-name="isSameBoundingBox" pkg="rvip" type="test_rvip"/>
+</launch>

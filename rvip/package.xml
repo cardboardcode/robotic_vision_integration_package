@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rvip</name>
+  <version>0.0.1</version>
+  <description>The rvip package</description>
+  <author>Bey Hao Yun</author>
+  <maintainer email="beyhy@artc.a-star.edu.sg">Bey Hao Yun</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>pcl_ros</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>darknet_ros_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>roslint</build_depend>
+  <build_depend>roslaunch</build_depend>
+
+  <build_export_depend>cv_bridge</build_export_depend>
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>pcl_ros</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>pcl_ros</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+  <test_depend>code_coverage</test_depend>
+
+  <export>
+  <rosdoc config="rosdoc.yaml" />
+  </export>
+
+</package>

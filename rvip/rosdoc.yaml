@@ -1,0 +1,6 @@
+ - builder: doxygen
+   name: RVIP Documentation
+   output_dir: doc
+   file_patterns: '*.c *.cpp *.h *.hpp *.cc *.hh *.dox *.md'
+   image_path: 'img'
+   use_mdfile_as_mainpage: mainpage.md
