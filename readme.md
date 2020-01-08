@@ -1,5 +1,5 @@
 # Robotic Vision Integration Package (RVIP) Documentation
-
+![Build Status](https://img.shields.io/gitlab/pipeline/cardboardcode/rvip)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![codecov](https://codecov.io/gl/cardboardcode/rvip_ros/branch/master/graph/badge.svg?token=9XFJvJLbpK)](https://codecov.io/gl/cardboardcode/rvip)
 
